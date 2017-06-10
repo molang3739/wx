@@ -85,7 +85,7 @@ class wechatCallbackapiTest
         sort($tmpArr, SORT_STRING);
         $tmpStr = implode( $tmpArr );
         $tmpStr = sha1( $tmpStr );
-        echo $tmpStr;
+        //echo $tmpStr;
         if( $tmpStr == $signature ){
             return true;
         }else{
