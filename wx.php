@@ -56,6 +56,12 @@ class wechatCallbackapiTest
                         $contentStr = "你输入的是2";
                     }
 
+
+                    $url = 'http://www.tuling123.com/openapi/api?key=93b251aca9fa7c919ddd80384a3feb60&info=';
+                    $info = urlencode($keyword);
+                    $contentStr = file_get_contents($url.$info);
+                    //echo $res;
+
                     $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
                     echo $resultStr;
                 }else{
