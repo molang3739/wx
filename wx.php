@@ -61,7 +61,9 @@ class wechatCallbackapiTest
                     $info = urlencode($keyword);
                     $res = file_get_contents($url.$info);
                     //echo $res;
-                    $contentStr =$res;
+                    $data = json_decode($res);
+                    //echo $data->text;
+                    $contentStr =$data->text;
 
                     $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
                     echo $resultStr;
