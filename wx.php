@@ -59,6 +59,7 @@ class wechatCallbackapiTest
 
                     $url = 'http://www.tuling123.com/openapi/api?key=93b251aca9fa7c919ddd80384a3feb60&info=';
                     $info = urlencode($keyword);
+                    file_put_contents('log.txt', $keyword.'\r\n;',FILE_APPEND);
                     $res = file_get_contents($url.$info);
                     //echo $res;
                     $data = json_decode($res);
