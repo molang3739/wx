@@ -4,10 +4,10 @@
   */
 
 //define your token
-define("TOKEN", "weixin");
+define("TOKEN", "dahuanggou");
 $wechatObj = new wechatCallbackapiTest();
-//$wechatObj->valid();
-$wechatObj->responseMsg();
+$wechatObj->valid();
+//$wechatObj->responseMsg();
 
 class wechatCallbackapiTest
 {
