@@ -4,6 +4,7 @@
   */
 
 //define your token
+//error_reporting(E_ALL);
 define("TOKEN", "dahuanggou");
 $wechatObj = new wechatCallbackapiTest();
 //$wechatObj->valid();
@@ -66,7 +67,8 @@ class wechatCallbackapiTest
                     //echo $res;
                     $data = json_decode($res);
                     //echo $data->text;
-                    $contentStr =$data->info->text;
+                    $contentStr =$data->data->info->text;
+		    //$contentStr='abcd';
 
                     $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
                     echo $resultStr;
