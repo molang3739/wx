@@ -58,7 +58,7 @@ class wechatCallbackapiTest
 
 
                     $url = 'http://www.tuling123.com/openapi/api?key=93b251aca9fa7c919ddd80384a3feb60&info=';
-                    $url ='https://api.ownthink.com/bot?appid=45993efdc5ea614dd5e0dbddc664d283&userid=user&spoken='
+                    $url ='https://api.ownthink.com/bot?appid=45993efdc5ea614dd5e0dbddc664d283&userid=user&spoken=';
                     $info = urlencode($keyword);
                     file_put_contents('log.txt', $keyword.'\r\n;',FILE_APPEND);
                     $res = file_get_contents($url.$info);
